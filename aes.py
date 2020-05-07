@@ -2,7 +2,7 @@ from Crypto.Cipher import AES
 import binascii           
 from Crypto import Random 
 
-#use his given key
+#use this given key
 keyHex = b'\x2B\x7E\x15\x16\x28\xAE\xD2\xA6\xAB\xF7\x15\x88\x09\xCF\x4F\x3C'   
 key = binascii.hexlify(keyHex).decode('ascii')                   
 print("Key: " + key)      
@@ -14,7 +14,7 @@ print("Initialization Vector: " + iv)
 #generate your cipher with CFB and IV
 cipher = AES.new(key, AES.MODE_CFB, iv)      
 
-#use theis given plaintext
+#use this given plaintext
 plaintext = 'Iaintgoingdownforthis.Youainttakinmealive'          
 print("Plaintext: " + plaintext) 
 
